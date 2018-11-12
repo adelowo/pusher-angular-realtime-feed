@@ -20,7 +20,7 @@ export class FeedFormComponent implements OnInit {
   }
 
   submit() {
-    this.errorMsg = false
+    this.errorMsg = ''
     this.isSending = true
     this.infoMsg = 'Processing your request.. Wait a minute'
 
@@ -30,8 +30,7 @@ export class FeedFormComponent implements OnInit {
         body: this.content,
       })
       .toPromise()
-      .then(data => {
-        console.log(data)
+      .then((data: { message: string; status: boolean }) => {
         this.infoMsg = data.message
         setTimeout(() => {
           this.infoMsg = ''
@@ -46,4 +45,6 @@ export class FeedFormComponent implements OnInit {
         this.isSending = false
       })
   }
+
+  ngOnInit() {}
 }

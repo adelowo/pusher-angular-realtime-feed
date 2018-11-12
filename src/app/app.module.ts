@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { FeedFormComponent } from './feed-form/feed-form.component'
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardComponent } from './dashboard/dashboard.component'
 import { FeedComponent } from './feed/feed.component'
 
 const appRoutes: Routes = [
