@@ -1,15 +1,49 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core'
+import { HttpClient } from '@angular/common/http'
 
 @Component({
   selector: 'app-feed-form',
   templateUrl: './feed-form.component.html',
-  styleUrls: ['./feed-form.component.css']
+  styleUrls: ['./feed-form.component.css'],
 })
 export class FeedFormComponent implements OnInit {
+  private isSending: boolean
+  private httpClient: HttpClient
 
-  constructor() { }
+  public content: string
+  public errorMsg: string
+  public infoMsg: string
+  public title: string
 
-  ngOnInit() {
+  constructor(private http: HttpClient) {
+    this.httpClient = http
   }
 
+  submit() {
+    this.errorMsg = false
+    this.isSending = true
+    this.infoMsg = 'Processing your request.. Wait a minute'
+
+    this.http
+      .post('http://localhost:3000/submit', {
+        title: this.title,
+        body: this.content,
+      })
+      .toPromise()
+      .then(data => {
+        console.log(data)
+        this.infoMsg = data.message
+        setTimeout(() => {
+          this.infoMsg = ''
+        }, 1000)
+
+        this.isSending = false
+      })
+      .catch(error => {
+        this.infoMsg = ''
+        this.errorMsg = error.error.message
+
+        this.isSending = false
+      })
+  }
 }

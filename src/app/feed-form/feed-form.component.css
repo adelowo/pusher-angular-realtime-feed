@@ -1,0 +1,13 @@
+textarea {
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 7px;
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.error {
+  color: red;
+}

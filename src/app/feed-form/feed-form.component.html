@@ -1,3 +1,20 @@
-<p>
-  feed-form works!
-</p>
+<h3>Create a new post</h3>
+<div *ngIf="infoMsg">{{ infoMsg }}</div>
+<div *ngIf="errorMsg" class="error">{{ errorMsg }}</div>
+<div>
+  <div>
+    <label>Title: </label>
+    <div><input type="text" name="title" [(ngModel)]="title" /></div>
+  </div>
+
+  <div><label>Message: </label></div>
+  <div>
+    <textarea
+      [(ngModel)]="content"
+      rows="10"
+      cols="35"
+      [disabled]="isSending"
+    ></textarea>
+  </div>
+</div>
+<p *ngIf="!isSending"><button (click)="submit()">Send</button></p>
