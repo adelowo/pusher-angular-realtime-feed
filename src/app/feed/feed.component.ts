@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { FeedService } from '../feed-service.service';
+import { FeedService } from '../feed.service';
 import { Feed } from '../feed';
 import { Subscription } from 'rxjs';
 

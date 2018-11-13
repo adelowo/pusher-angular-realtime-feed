@@ -10,7 +10,6 @@ import { FeedFormComponent } from './feed-form/feed-form.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FeedComponent } from './feed/feed.component';
-import { FeedService } from './feed-service.service';
 
 const appRoutes: Routes = [
   { path: 'new', component: FeedFormComponent },
