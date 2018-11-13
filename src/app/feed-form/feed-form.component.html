@@ -3,28 +3,31 @@
     <h3 class="notification">Create a new post</h3>
     <div *ngIf="infoMsg" class="notification is-success">{{ infoMsg }}</div>
     <div *ngIf="errorMsg" class="is-danger notification">{{ errorMsg }}</div>
-    <div class="field">
-      <label class="label">Title : </label>
-      <div class="control">
-        <input
-          class="input"
-          type="text"
-          placeholder="Post title"
-          name="title"
-          [(ngModel)]="title"
-        />
+    <form>
+      <div class="field">
+        <label class="label">Title : </label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="Post title"
+            name="title"
+            [(ngModel)]="title"
+          />
+        </div>
       </div>
-    </div>
 
-    <div><label>Message: </label></div>
-    <div>
-      <textarea
-        [(ngModel)]="content"
-        rows="10"
-        cols="70"
-        [disabled]="isSending"
-      ></textarea>
-    </div>
+      <div><label>Message: </label></div>
+      <div>
+        <textarea
+          [(ngModel)]="content"
+          rows="10"
+          cols="70"
+          [disabled]="isSending"
+          name="content"
+        ></textarea>
+      </div>
+    </form>
   </div>
 
   <div class="is-7"></div>

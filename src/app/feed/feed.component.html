@@ -1,6 +1,6 @@
 <h1 class="notification is-info">Your feed</h1>
 <div class="columns">
-  <div class="column is-5">
+  <div class="column is-7">
     <div *ngFor="let feed of feeds">
       <div class="box">
         <article class="media">
@@ -15,7 +15,7 @@
           <div class="media-content">
             <div class="content">
               <p>
-                <strong>{{ feed.title }}</strong> <small>@johnsmith</small>
+                <strong>{{ feed.title }}</strong>
                 <small>{{ feed.createdAt }}</small> <br />
                 {{ feed.content }}
               </p>

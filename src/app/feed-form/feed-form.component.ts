@@ -37,6 +37,8 @@ export class FeedFormComponent implements OnInit {
         }, 1000);
 
         this.isSending = false;
+        this.content = '';
+        this.title = '';
       })
       .catch(error => {
         this.infoMsg = '';
