@@ -2,6 +2,8 @@ const express = require('express');
 const Pusher = require('pusher');
 const cors = require('cors');
 
+require('dotenv').config({ path: 'variables.env' });
+
 const app = express();
 const port = process.env.PORT || 3000;
 
