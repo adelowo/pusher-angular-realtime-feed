@@ -1,0 +1,28 @@
+<h1 class="notification is-info">Your feed</h1>
+<div class="columns">
+  <div class="column is-5">
+    <div *ngFor="let feed of feeds">
+      <div class="box">
+        <article class="media">
+          <div class="media-left">
+            <figure class="image is-64x64">
+              <img
+                src="https://bulma.io/images/placeholders/128x128.png"
+                alt="Image"
+              />
+            </figure>
+          </div>
+          <div class="media-content">
+            <div class="content">
+              <p>
+                <strong>{{ feed.title }}</strong> <small>@johnsmith</small>
+                <small>{{ feed.createdAt }}</small> <br />
+                {{ feed.content }}
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
