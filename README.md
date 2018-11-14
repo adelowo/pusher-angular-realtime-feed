@@ -1,6 +1,6 @@
 ## pusher-angular-realtime-feed
 
-Building a realtime post feed with Angular 7 and Pusher channels. 
+Building a realtime post feed with Angular 7 and Pusher channels. Tutorial is located at https://pusher.com/tutorials/live-feed-angular-7
 
 ### Getting Started
 
